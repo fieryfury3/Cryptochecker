@@ -1,20 +1,27 @@
-from tkinter import *
+import tkinter as tk
 
-blank_window = Tk()
+window = tk.Tk()
 
-labelone = Label(blank_window, text="Name")
-labeltwo = Label(blank_window, text="Password")
-entry_1 = Entry(blank_window)
-entry_2 = Entry(blank_window)
+window.title("CoinMarketCap")
 
+window.geometry("400x400")
 
-labelone.grid(row=0, sticky=E)
-labeltwo.grid(row=1, sticky=E)
+# Functions
 
-entry_1.grid(row=0, column=1)
-entry_2.grid(row=1, column=1)
+# Label
+title = tk.Label(text="Please type name of coin: ")title.grid(row=0, column=0)
 
-checkbox = Checkbutton(blank_window, text="Keep me logged in")
-checkbox.grid(columnspan=2)
+# Entry Field
+entry_field1 = tk.Entry()
+entry_field1.grid(column=1, row=0)
 
-blank_window.mainloop()
+# Button
+button1 = tk.Button(text="Search")
+button1.grid(column=1, row=1)
+
+# Text Field
+text_field = tk.Text(master=window, height=10, width=20)
+text_field.grid()
+
+window.mainloop()
+
