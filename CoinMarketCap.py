@@ -33,7 +33,7 @@ def search():
             print("Symbol: " + id["symbol"])
             print("Price: " + locale.currency(id["quotes"]["USD"]["price"], grouping=True))
             print("Market Cap: " + locale.currency(id["quotes"]["USD"]["market_cap"], grouping=True))
-            print("Total Supply: " + locale.currency((int((id["total_supply"]))), grouping=True).replace("$", ""))
+            print("Total Supply: " + '{:,.0f}'.format(int((id["total_supply"])))) # Better way to format?
             searchanother()
 
     else:
