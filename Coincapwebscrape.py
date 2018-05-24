@@ -38,3 +38,4 @@ def price_24h_change():
         if percent != None:
             percent
 coinname()
+
