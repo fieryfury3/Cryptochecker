@@ -37,7 +37,17 @@ def search():
             print("24 hour change: " + str(id["quotes"]["USD"]["percent_change_24h"]) + "%")
             print("7 day change: " + str(id["quotes"]["USD"]["percent_change_7d"]) + "%")
             searchanother()
-
+            
+        elif coin_symbol == coin:
+            print("Name: " + id["name"])
+            print("Symbol: " + id["symbol"])
+            print("Price: " + locale.currency(id["quotes"]["USD"]["price"], grouping=True))
+            print("Market Cap: " + locale.currency(id["quotes"]["USD"]["market_cap"], grouping=True))
+            print("Total Supply: " + '{:,.0f}'.format(int((id["total_supply"]))))
+            print("24 hour change: " + str(id["quotes"]["USD"]["percent_change_24h"]) + "%")
+            print("7 day change: " + str(id["quotes"]["USD"]["percent_change_7d"]) + "%")
+            searchanother()
+            
     else:
         print("Check Spelling\n")
         search()
