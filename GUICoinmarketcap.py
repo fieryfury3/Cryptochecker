@@ -24,4 +24,3 @@ text_field = tk.Text(master=window, height=10, width=20)
 text_field.grid()
 
 window.mainloop()
-
