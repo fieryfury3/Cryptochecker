@@ -55,7 +55,7 @@ def search():
             print("1 hour change: " + str(hour_1_change) + "%" + "\n")
 
 
-        elif day_7_change != None and coin == "7d" and day_7_change >= 5:   # prints name and percentage if the coin has increased in value more than 5% in the past 7 days
+        elif day_7_change is not None and coin == "7d" and day_7_change >= 5:   # prints name and percentage if the coin has increased in value more than 5% in the past 7 days
                 print(coin_name.title())
                 print("7 day change: " + str(day_7_change) + "%" + "\n")
 
